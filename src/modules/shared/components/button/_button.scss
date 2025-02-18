@@ -1,0 +1,135 @@
+@use "../../assets/styles/base";
+@use "../../assets/styles/abstracts" as *;
+
+.button_container {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    min-width: 90px;
+    min-height: 44px;
+    width: 100%;
+    text-transform: uppercase;
+    will-change: transform;
+    letter-spacing: 0.025em;
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    line-height: 1.5;
+    border-radius: 10px;
+    transition: all 0.15s ease;
+    color: $light;
+    cursor: pointer;
+    box-shadow:
+      0 4px 6px rgb(50 50 93 / 11%),
+      0 1px 3px rgb(0 0 0 / 8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+
+    .label {
+      white-space: nowrap;
+      color: inherit;
+    }
+
+    .btn_icon {
+      color: $light;
+    }
+    &:hover {
+      transform: translateY(-0.12em);
+    }
+  }
+
+  @mixin button-bg($bg) {
+    background-color: $bg;
+
+    &:hover {
+      background-color: darken($bg, 12%);
+      transform: translateY(-0.12em);
+      transition: all 0.2s ease;
+    }
+  }
+  .btn-primary {
+    width: fit-content;
+    @include button-bg($primary);
+  }
+
+  .btn-secondary {
+    @include button-bg($secondary-400);
+  }
+
+  .btn-danger {
+    @include button-bg($danger);
+  }
+
+  .btn-warning {
+    @include button-bg($warning);
+  }
+
+  .btn-success {
+    @include button-bg($success);
+  }
+
+  .btn-info {
+    @include button-bg($info);
+  }
+
+  @mixin button-outline-bg($bg) {
+    background-color: $light;
+
+    &:hover {
+      color: $light;
+      background-color: $bg;
+      transition: all 0.3s ease;
+
+      .btn_icon {
+        color: $light;
+      }
+    }
+  }
+
+  .btn-outline-primary {
+    @include button-outline-bg($primary);
+  }
+
+  .btn-outline-secondary {
+    @include button-outline-bg($secondary-400);
+  }
+
+  .btn-outline-danger {
+    @include button-outline-bg($danger);
+  }
+
+  .btn-outline-warning {
+    @include button-outline-bg($warning);
+  }
+
+  .btn-outline-success {
+    @include button-outline-bg($success);
+  }
+
+  .btn-outline-info {
+    @include button-outline-bg($info);
+  }
+
+  .btn-disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+    &:hover {
+      background-color: #f8fafc;
+      color: red;
+      opacity: 0.5;
+      border-color: red;
+      transform: none !important;
+    }
+  }
+}
+.btn_flex_container {
+  display: flex;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+  // & > * {
+  //   min-width: 15.75rem !important;
+  // }
+}

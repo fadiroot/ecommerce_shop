@@ -1,0 +1,13 @@
+@use "../../../../assets/styles/base";
+@use "../../../../assets/styles/abstracts" as *;
+
+.columns_container {
+  padding: 0 22px 12px 22px;
+}
+
+.MuiSwitch-thumb {
+  color: $secondary-100;
+}
+.css-jsexje-MuiSwitch-thumb {
+  color: $secondary-100;
+}

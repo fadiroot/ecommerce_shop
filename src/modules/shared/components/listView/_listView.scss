@@ -1,0 +1,113 @@
+@use "../../assets/styles/base";
+@use "../../assets/styles/abstracts" as *;
+@forward "./components/index";
+
+.card_container {
+    // background-color: $light;
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    // .table_head {
+    //     background-color: #f4f6f8;
+    // }
+    .delete-header-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 58.3px;
+        padding: 5px;
+        justify-content: space-between;
+    }
+    .delete_container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+
+        .delete_btn {
+            min-height: 30px !important;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .card_header {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.create_button {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.action_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.table_head_label {
+    white-space: nowrap;
+}
+
+.table_head_sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darg-and-drop-icon {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.reset-no-data-found-btn {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.update_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 0 22px 8px 22px;
+
+    .update_btn {
+        min-height: 32px !important;
+        &:hover {
+            transform: translateY(0em) !important;
+        }
+    }
+}
+
+.table_loading {
+    position: relative;
+}
+
+.table_loading_active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-1yhpg23-MuiTableCell-root > div > i {
+    cursor: pointer;
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,11 @@
+.filter_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+
+  .filter_buttons {
+    padding: 8px !important;
+    color: white;
+  }
+}
